@@ -1,1 +1,11 @@
 <h1>My Todos</h1>
+
+<a href="create/"><button>Add</button></a>
+
+{% for todo in todos %}
+    <p>{{ todo.title }}
+        <a href=""><button>Edit</button></a>
+        <a href="delete/{{ todo.id }}/"><button>Delete</button></a> 
+    </p>
+
+{% endfor %}
