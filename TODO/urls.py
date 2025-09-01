@@ -19,8 +19,8 @@ from django.urls import path
 from todo_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.todo_list),
-    path("delete/<int:id>/", views.todo_delete),
-    path("create/", views.todo_create),
-    path("update/<int:id>/", views.todo_update),
+    path("", views.todo_list, name="todo_list"),
+    path("delete/<int:id>/", views.todo_delete, name="todo-delete"),
+    path("create/", views.todo_create, name="todo-create"),
+    path("update/<int:id>/", views.todo_update, name="todo-update"),
 ]
